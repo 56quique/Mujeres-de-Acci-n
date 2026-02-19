@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mujeres de Acción</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- 1º TEMA: tierra -->
+<!-- 2º TEMA: agua -->
+<!-- 3º TEMA: sereno -->
+<!-- 4º TEMA: vital -->
+<!-- 5º TEMA: rosa -->
+
+<body class="tema-vital">
+
+     <header>
+        <h1>Mujeres de Acción</h1>
+    </header>
+
+    <main>
+
+        <!-- 1. Hero con video de bienvenida -->
+        <section class="hero">
+            <video src="videos/video-bosque.mp4" autoplay muted loop></video>
+            <div class="hero-texto">
+                <h2>Dios te ve</h2>
+                <p>Este es un espacio para vos.</p>
+            </div>
+        </section>
+
+        <!-- 2. Bienvenida resumida -->
+        <section class="bienvenida">
+            <h2>Bienvenida</h2>
+            <p>
+                Aquí irá un resumen cálido del mensaje de bienvenida.
+                Breve, directo y acompañante.
+            </p>
+        </section>
+
+        <!-- 3. Testimonio (versión breve) -->
+        <section class="testimonio">
+            <h2>Mi historia</h2>
+            <p>
+                Aquí irá una versión resumida del testimonio.
+                Impactante pero no abrumadora.
+            </p>
+            <a href="pages/testimonio.html">Leer testimonio completo</a>
+        </section>
+
+        <!-- 4. Video de encuentro -->
+        <section class="encuentro">
+            <video src="videos/video-encuentro.mp4" controls></video>
+        </section>
+
+        <!-- 5. Invitación a la salvación -->
+        <section class="salvacion">
+            <h2>Una invitación para vos</h2>
+            <p>
+                Texto claro, respetuoso y directo invitando a acercarse a Dios.
+            </p>
+        </section>
+        
+        <!-- 6. Devocional -->
+        <section id="devocional-section">
+
+        <h2 class="titulo-seccion">Devocional del Mes</h2>
+
+        <div id="encabezado-mes"></div>
+
+        <div id="calendario-mes"></div>
+
+        <div id="acordeon-dia"></div>
+
+        </section>
+
+
+        <!-- 7. Áreas de crecimiento -->
+        <section class="areas">
+            <h2>Crecimiento Integral</h2>
+
+            <div class="grid-areas">
+
+                <div>
+                    <h3>Mi relación con Dios</h3>
+                </div>
+
+                <div>
+                    <h3>Sanando mi interior</h3>
+                </div>
+
+                <div>
+                    <h3>Mi propósito</h3>
+                </div>
+
+                <div>
+                    <h3>Mi hogar</h3>
+                </div>
+
+                <div>
+                    <h3>Mi cuerpo</h3>
+                </div>
+
+                <div>
+                    <h3>Mi llamado profesional</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 8. Testimonios -->
+        <section class="tu-historia">
+    <h2>Tu historia puede ayudar a cambiar otra historia</h2>
+    <p>
+        Compartí un mensaje breve de esperanza.
+        Puede ser la palabra que otra mujer necesita hoy.
+    </p>
+
+    <form 
+    id="form-historia"
+    action="https://formspree.io/f/meelkklp" method="POST">
+    <input 
+    type="email" 
+    name="email" 
+    placeholder="Tu email (opcional)" 
+     >
+    <br><br>
+
+
+        <textarea 
+            name="historia" 
+            maxlength="300" 
+            required
+            placeholder="Escribí hasta 300 caracteres..."
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">Enviar historia</button>
+        <p id="mensaje-envio" style="display:none; color: green; margin-top: 10px;">
+    Gracias por compartir tu historia 💛
+</p>
+
+    </form>
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 Mujeres de Acción</p>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
