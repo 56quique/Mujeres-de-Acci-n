@@ -1,0 +1,274 @@
+﻿/* ================================================= */
+/* 🎨 PALETAS DE COLORES */
+/* Cambiá la clase del <body> para activar una */
+/* ================================================= */
+
+/* 🌿 TEMA TIERRA */
+.tema-tierra {
+    --color-fondo: #FFFFFF;
+    --color-fondo-suave: #FCEBB6;
+    --color-principal: #E1A36F;
+    --color-secundario: #6D9891;
+    --color-texto: #32434D;
+}
+
+/* 🌊 TEMA AGUA */
+.tema-agua {
+    --color-fondo: #F4F9FB;
+    --color-fondo-suave: #DCEFF5;
+    --color-principal: #5BA4CF;
+    --color-secundario: #2E6F95;
+    --color-texto: #1E3A4C;
+}
+
+/* 🌊 TEMA SERENO */
+.tema-sereno {
+    --color-fondo: #FFFFFF;
+    --color-fondo-suave: #D4D5BF;
+    --color-principal: #6F9F9C;
+    --color-secundario: #44C1C5;
+    --color-texto: #1B4E4F;
+}
+
+/* 🌊 TEMA VITAL */
+.tema-vital {
+    --color-fondo: #FFFFFF;
+    --color-fondo-suave: #FEB873;
+    --color-principal: #EB998B;
+    --color-secundario: #B088AD;
+    --color-texto: #1D2C65;
+}
+
+/* 🌸 TEMA ROSA */
+.tema-rosa {
+    --color-fondo: #FFF6F9;
+    --color-fondo-suave: #FFE3ED;
+    --color-principal: #E98BA4;
+    --color-secundario: #B65C74;
+    --color-texto: #5A2E3C;
+}
+
+
+/* ================================================= */
+/* 🌎 ESTILOS GENERALES DEL SITIO */
+/* Controla tipografía base, fondo y comportamiento global */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+
+/* ================================================= */
+/* 🧭 HEADER */
+/* Controla el encabezado superior */
+/* ================================================= */
+
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* 🎬 HERO */
+/* Controla el video principal y el texto superpuesto */
+/* ================================================= */
+
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+
+/* ================================================= */
+/* 👋 BIENVENIDA */
+/* Sección de bienvenida resumida */
+/* ================================================= */
+
+.bienvenida {
+    background-color: var(--color-fondo-suave);
+}
+
+
+/* ================================================= */
+/* 📖 TESTIMONIO */
+/* Sección Mi historia */
+/* ================================================= */
+
+.testimonio {
+    background-color: var(--color-fondo);
+}
+
+.testimonio a {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* ================================================= */
+/* 🎥 ENCUENTRO */
+/* Video con controles */
+/* ================================================= */
+
+.encuentro video {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* ================================================= */
+/* 💛 SALVACIÓN */
+/* Sección invitación espiritual */
+/* ================================================= */
+
+.salvacion {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+
+/* ================================================= */
+/* 📅 DEVOCIONAL */
+/* Controla calendario y acordeón */
+/* ================================================= */
+
+#devocional-section {
+    background-color: var(--color-fondo-suave);
+}
+
+.titulo-seccion {
+    margin-bottom: 30px;
+}
+
+#encabezado-mes {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#calendario-mes {
+    margin-bottom: 20px;
+}
+
+#acordeon-dia {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* ================================================= */
+/* 🌱 ÁREAS DE CRECIMIENTO */
+/* Grid de 6 áreas */
+/* ================================================= */
+
+.areas {
+    background-color: var(--color-fondo);
+}
+
+.grid-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grid-areas div {
+    background-color: var(--color-fondo-suave);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* ================================================= */
+/* ✍️ FORMULARIO TU HISTORIA */
+/* Controla inputs y botón */
+/* ================================================= */
+
+.tu-historia {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.tu-historia input,
+.tu-historia textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.tu-historia button {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tu-historia button:hover {
+    opacity: 0.8;
+}
+
+
+/* ================================================= */
+/* 🔻 FOOTER */
+/* Controla el pie de página */
+/* ================================================= */
+
+footer {
+    background-color: var(--color-texto);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
