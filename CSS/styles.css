@@ -1,9 +1,7 @@
-﻿/* ================================================= */
+/* ================================================= */
 /* 🎨 PALETAS DE COLORES */
-/* Cambiá la clase del <body> para activar una */
 /* ================================================= */
 
-/* 🌿 TEMA TIERRA */
 .tema-tierra {
     --color-fondo: #FFFFFF;
     --color-fondo-suave: #FCEBB6;
@@ -12,7 +10,6 @@
     --color-texto: #32434D;
 }
 
-/* 🌊 TEMA AGUA */
 .tema-agua {
     --color-fondo: #F4F9FB;
     --color-fondo-suave: #DCEFF5;
@@ -21,7 +18,6 @@
     --color-texto: #1E3A4C;
 }
 
-/* 🌊 TEMA SERENO */
 .tema-sereno {
     --color-fondo: #FFFFFF;
     --color-fondo-suave: #D4D5BF;
@@ -30,7 +26,6 @@
     --color-texto: #1B4E4F;
 }
 
-/* 🌊 TEMA VITAL */
 .tema-vital {
     --color-fondo: #FFFFFF;
     --color-fondo-suave: #FEB873;
@@ -39,7 +34,6 @@
     --color-texto: #1D2C65;
 }
 
-/* 🌸 TEMA ROSA */
 .tema-rosa {
     --color-fondo: #FFF6F9;
     --color-fondo-suave: #FFE3ED;
@@ -50,8 +44,7 @@
 
 
 /* ================================================= */
-/* 🌎 ESTILOS GENERALES DEL SITIO */
-/* Controla tipografía base, fondo y comportamiento global */
+/* 🌎 ESTILOS GENERALES */
 /* ================================================= */
 
 * {
@@ -60,14 +53,36 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 18px; /* 👈 Tamaño base cómodo para celular */
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
@@ -86,27 +101,31 @@ a:hover {
     opacity: 0.8;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* ================================================= */
 /* 🧭 HEADER */
-/* Controla el encabezado superior */
 /* ================================================= */
 
 header {
     background-color: var(--color-principal);
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 25px 20px;
+    font-size: 1.2rem;
 }
 
 
 /* ================================================= */
 /* 🎬 HERO */
-/* Controla el video principal y el texto superpuesto */
 /* ================================================= */
 
 .hero {
     position: relative;
+    min-height: 60vh;
     height: 80vh;
     overflow: hidden;
 }
@@ -124,14 +143,15 @@ header {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    padding: 20px 40px;
+    padding: 25px;
     border-radius: 10px;
+    width: 85%;
+    font-size: 1.1rem;
 }
 
 
 /* ================================================= */
 /* 👋 BIENVENIDA */
-/* Sección de bienvenida resumida */
 /* ================================================= */
 
 .bienvenida {
@@ -141,7 +161,6 @@ header {
 
 /* ================================================= */
 /* 📖 TESTIMONIO */
-/* Sección Mi historia */
 /* ================================================= */
 
 .testimonio {
@@ -156,7 +175,6 @@ header {
 
 /* ================================================= */
 /* 🎥 ENCUENTRO */
-/* Video con controles */
 /* ================================================= */
 
 .encuentro video {
@@ -168,7 +186,6 @@ header {
 
 /* ================================================= */
 /* 💛 SALVACIÓN */
-/* Sección invitación espiritual */
 /* ================================================= */
 
 .salvacion {
@@ -179,7 +196,6 @@ header {
 
 /* ================================================= */
 /* 📅 DEVOCIONAL */
-/* Controla calendario y acordeón */
 /* ================================================= */
 
 #devocional-section {
@@ -193,10 +209,12 @@ header {
 #encabezado-mes {
     margin-bottom: 20px;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
-#calendario-mes {
-    margin-bottom: 20px;
+#calendario-mes,
+#acordeon-dia {
+    width: 100%;
 }
 
 #acordeon-dia {
@@ -207,7 +225,6 @@ header {
 
 /* ================================================= */
 /* 🌱 ÁREAS DE CRECIMIENTO */
-/* Grid de 6 áreas */
 /* ================================================= */
 
 .areas {
@@ -216,21 +233,21 @@ header {
 
 .grid-areas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
 
 .grid-areas div {
     background-color: var(--color-fondo-suave);
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
+    font-size: 1.05rem;
 }
 
 
 /* ================================================= */
-/* ✍️ FORMULARIO TU HISTORIA */
-/* Controla inputs y botón */
+/* ✍️ FORMULARIO */
 /* ================================================= */
 
 .tu-historia {
@@ -242,18 +259,22 @@ header {
 .tu-historia textarea {
     width: 100%;
     max-width: 500px;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
 .tu-historia button {
     background-color: var(--color-secundario);
     color: white;
-    padding: 10px 25px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    min-height: 44px;
 }
 
 .tu-historia button:hover {
@@ -263,12 +284,34 @@ header {
 
 /* ================================================= */
 /* 🔻 FOOTER */
-/* Controla el pie de página */
 /* ================================================= */
 
 footer {
     background-color: var(--color-texto);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    font-size: 1rem;
+}
+
+
+/* ================================================= */
+/* 📱 AJUSTES ESPECÍFICOS PARA CELULAR */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 19px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-texto {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
 }
