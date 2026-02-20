@@ -3,14 +3,20 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const video = document.querySelector(".encuentro video");
+    const video = document.querySelector(".video-encuentro");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+
+                video.currentTime = 0; // 🔁 vuelve al inicio
                 video.play();
+
             } else {
+
                 video.pause();
+                video.currentTime = 0; // 🔁 se reinicia al salir
+
             }
         });
     }, { threshold: 0.6 });
@@ -141,4 +147,5 @@ form.addEventListener("submit", function(event) {
         alert("Error de conexión.");
     });
 });
+
 
