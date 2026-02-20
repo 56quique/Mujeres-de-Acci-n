@@ -1,3 +1,61 @@
+/* ESTA PARTE CONTROLA EL COMPORTAMIENTO DEL CAMBIO DEL TEMA */
+/* hace que se pueda cambiar el tema con un boton */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const temas = [
+        "tema-tierra",
+        "tema-agua",
+        "tema-sereno",
+        "tema-vital",
+        "tema-rosa"
+    ];
+
+    const iconos = [
+        "🌿",
+        "🌊",
+        "🍃",
+        "🌅",
+        "🌸"
+    ];
+
+    const boton = document.getElementById("cambiar-tema");
+
+    // 🔁 Cargar tema guardado
+    let temaGuardado = localStorage.getItem("temaSeleccionado");
+
+    if (temaGuardado && temas.includes(temaGuardado)) {
+        document.body.classList.add(temaGuardado);
+    } else {
+        document.body.classList.add(temas[0]);
+        temaGuardado = temas[0];
+    }
+
+    let indiceTema = temas.indexOf(temaGuardado);
+    boton.textContent = iconos[indiceTema];
+
+    // 🔄 Cambiar tema
+    boton.addEventListener("click", function () {
+
+        document.body.classList.remove(temas[indiceTema]);
+
+        indiceTema++;
+        if (indiceTema >= temas.length) {
+            indiceTema = 0;
+        }
+
+        document.body.classList.add(temas[indiceTema]);
+
+        boton.textContent = iconos[indiceTema];
+
+        // 💾 Guardar en navegador
+        localStorage.setItem("temaSeleccionado", temas[indiceTema]);
+
+    });
+
+});
+
+
 /* ESTA PARTE CONTROLA EL COMPORTAMIENTO DEL 2º Video */
 /* hace que se reproduzca solo cunado se esta viendo */
 
@@ -147,5 +205,6 @@ form.addEventListener("submit", function(event) {
         alert("Error de conexión.");
     });
 });
+
 
 
