@@ -11,44 +11,33 @@ document.addEventListener("DOMContentLoaded", function () {
         "tema-rosa"
     ];
 
-    const iconos = [
-        "🌿",
-        "🌊",
-        "🍃",
-        "🌅",
-        "🌸"
-    ];
+    const iconos = ["🌿","🌊","🍃","🌅","🌸"];
 
     const boton = document.getElementById("cambiar-tema");
 
-    // 🔁 Cargar tema guardado
+    if (!boton) return;
+
     let temaGuardado = localStorage.getItem("temaSeleccionado");
 
-    if (temaGuardado && temas.includes(temaGuardado)) {
-        document.body.classList.add(temaGuardado);
-    } else {
-        document.body.classList.add(temas[0]);
+    if (!temaGuardado || !temas.includes(temaGuardado)) {
         temaGuardado = temas[0];
     }
+
+    document.body.className = temaGuardado;
 
     let indiceTema = temas.indexOf(temaGuardado);
     boton.textContent = iconos[indiceTema];
 
-    // 🔄 Cambiar tema
     boton.addEventListener("click", function () {
-
-        document.body.classList.remove(temas[indiceTema]);
 
         indiceTema++;
         if (indiceTema >= temas.length) {
             indiceTema = 0;
         }
 
-        document.body.classList.add(temas[indiceTema]);
-
+        document.body.className = temas[indiceTema];
         boton.textContent = iconos[indiceTema];
 
-        // 💾 Guardar en navegador
         localStorage.setItem("temaSeleccionado", temas[indiceTema]);
 
     });
@@ -205,6 +194,7 @@ form.addEventListener("submit", function(event) {
         alert("Error de conexión.");
     });
 });
+
 
 
 
