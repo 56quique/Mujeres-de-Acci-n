@@ -1,4 +1,27 @@
-﻿
+/* ESTA PARTE CONTROLA EL COMPORTAMIENTO DEL 2º Video */
+/* hace que se reproduzca solo cunado se esta viendo */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const video = document.querySelector(".encuentro video");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.6 });
+
+    observer.observe(video);
+
+});
+
+
+
+
 /* ESTA PARTE CONTROLA EL COMPORTAMIENTO DEL DEVOCIONAL */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -118,3 +141,4 @@ form.addEventListener("submit", function(event) {
         alert("Error de conexión.");
     });
 });
+
