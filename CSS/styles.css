@@ -46,11 +46,11 @@ header h1 {
 /* ================================================= */
 
 .tema-tierra {
-    --color-fondo: #FFFFFF;
-    --color-fondo-suave: #FCEBB6;
-    --color-principal: #E1A36F;
-    --color-secundario: #6D9891;
-    --color-texto: #32434D;
+    --color-fondo: #95b09d;
+    --color-fondo-suave: #669178;
+    --color-principal: #184f24;
+    --color-secundario: #183317;
+    --color-texto: #183317;
 }
 
 .tema-agua {
