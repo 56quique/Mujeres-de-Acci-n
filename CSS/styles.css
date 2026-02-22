@@ -54,11 +54,11 @@ header h1 {
 }
 
 .tema-agua {
-    --color-fondo: #F4F9FB;
-    --color-fondo-suave: #DCEFF5;
-    --color-principal: #5BA4CF;
-    --color-secundario: #2E6F95;
-    --color-texto: #1E3A4C;
+    --color-fondo: #4d584a;
+    --color-fondo-suave: #2f2070;
+    --color-principal: #0a0e25;
+    --color-secundario: #611f70;
+    --color-texto: #c51520;
 }
 
 .tema-sereno {
